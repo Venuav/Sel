@@ -27,8 +27,7 @@ public class Ete {
         driver.switchTo().frame(0);
         driver.switchTo().defaultContent();
         
-        Actions act=new Actions(driver);
-        act.driver.findElement(By.cssSelector("#alertbtn")).double
+        
 	}
 
 }

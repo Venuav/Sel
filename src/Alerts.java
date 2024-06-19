@@ -29,8 +29,10 @@ public class Alerts {
 	//	System.setProperty("webdriver.chrome.driver","C:\\Users\\venua\\Documents\\chromedriver-win64.exe");
 	//	WebDriverManager.chromedriver().setup(); 
 		ChromeDriver driver = new ChromeDriver();
+
 		System.out.println("Latestpushes");
 				
+            
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
       //driver.get("https://www.ajio.com/");
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
