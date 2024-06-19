@@ -18,7 +18,6 @@ import org.openqa.selenium.TakesScreenshot;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Alerts {
-
 	/**
 	 * @param args
 	 * @throws InterruptedException
@@ -29,8 +28,6 @@ public class Alerts {
 	//	System.setProperty("webdriver.chrome.driver","C:\\Users\\venua\\Documents\\chromedriver-win64.exe");
 	//	WebDriverManager.chromedriver().setup(); 
 		ChromeDriver driver = new ChromeDriver();
-                
-		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
       //driver.get("https://www.ajio.com/");
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
@@ -43,8 +40,7 @@ public class Alerts {
 		}
 		Thread.sleep(3000);
 		  File src=  ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		  FileUtils.copyFile(src, new File("C:\\Users\\venua\\screenshot.png"));
-		  
+		  FileUtils.copyFile(src, new File("C:\\Users\\venua\\screenshot.png"));  
 		driver.findElement(By.xpath("//button[@id='openwindow']")).click();
 		Set<String> window=driver.getWindowHandles();
 		Iterator<String> it=window.iterator();
@@ -57,14 +53,12 @@ public class Alerts {
 		js.executeScript("window.scrollBy(0,600)");
 		Thread.sleep(3000);
 	//	File src=((Takescreenshot)driver)
-		
 		driver.findElement(By.xpath("//header/div[3]/div[2]/form[1]/div[1]/div[1]/input[1]")).sendKeys("Kurta");
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//header/div[3]/div[2]/form[1]/div[1]/button[1]/span[1]")).click();
 		WebElement web=driver.findElement(By.xpath("//span[contains(text(),'HOME AND KITCHEN')]"));
 		Actions act=new Actions(driver);
 		act.moveToElement(web).doubleClick().build().perform();
-		
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//header/div[1]/ul[1]/li[2]/a[1]")).click();
 		Thread.sleep(3000);
@@ -85,7 +79,6 @@ public class Alerts {
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@value='SEND OTP']")).click();
 		driver.quit();
-
 	}
 
 }
